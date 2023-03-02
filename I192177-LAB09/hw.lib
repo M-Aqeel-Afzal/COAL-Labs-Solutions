@@ -1,0 +1,20 @@
+Print macro Char, num
+
+	mov dl, 10d
+	mov ah, 02
+	int 21h
+	
+	mov cl, num
+	mov ch, 0
+	
+	L:
+	mov dl, Char
+	mov ah, 02
+	int 21h
+	mov dl, 10d
+	mov ah, 02
+	int 21h
+	inc Char
+	Loop L
+
+endm

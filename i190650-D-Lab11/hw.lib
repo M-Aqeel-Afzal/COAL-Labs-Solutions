@@ -1,0 +1,13 @@
+Chars_Print macro startChar , numchars
+
+	mov cl,numchars
+	mov al,startChar
+
+	display:
+		mov dl,al
+		mov ah,02
+		int 21h
+		inc al
+	loop display
+
+endm
